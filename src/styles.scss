@@ -1,0 +1,131 @@
+
+* {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 450;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #22223b;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.nav-menu {
+    border: 1px solid white;
+    padding: 10px 20px;
+}
+
+.nav-menu:hover,
+.nav-menu:active,
+.nav-menu:focus {
+    color: #000;
+    background: #fff;
+    transition: all 0.5s;
+}
+
+.serif-font {
+    font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.div-bg {
+    background: rgba(74,14,89,1);
+}
+
+main {
+    position: relative;
+    z-index: -8;
+}
+
+.logo-contain {
+    width: 70px;
+    height: 70px;
+    background: rgb(26, 1, 32);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-title {
+    font-size: 7.75rem;
+    line-height: 1;
+    color: #fff;
+    // -webkit-text-stroke: 1px #fff;
+}
+
+.proj-container {
+    overflow: visible;
+
+    .layer {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+    
+        .inner-layer-shadow {
+            width: 100%;
+            height: 300px;
+            background-color: transparent;
+            position: absolute;
+            box-shadow: 10px -3px 114px 24px rgba(0,0,0,0.76) inset;
+    
+            .shadow-text {
+                position: absolute;
+                bottom: 12px;
+                left: 18px;
+                p {
+                    font-weight: 700;
+                    font-size: 3em;
+                }
+            }
+    
+            .image-layer {
+                position: absolute;
+                top: -140px;
+                 z-index: -1;
+            }
+        }
+    
+    }
+    
+    .project-txt-container {
+        padding: 30px 50px;
+        background: #2c2a4a;
+        box-shadow: 0px 2px 3px #000;
+        position: relative;
+        z-index: -1;
+    
+        .proj-img-container {
+            img {
+                width: 500px;
+            }
+        }
+    }
+}
+
+.contact-div {
+    background: #10002b;
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid white;
+    margin-top: 20px;
+}
+
+input[type=text], input[type=textarea] {
+    width: 100%;
+    font-size: 20px;
+    background: transparent;
+    outline: none;
+    border: 1px solid white;
+    padding: 2px;
+    margin-top: 5px;
+}
