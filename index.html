@@ -5,7 +5,6 @@
     <title>My Personal Porfolio</title>
     <link rel="stylesheet" type="text/css" href="src/styles.css">
     <script src="dist/index.js"></script>
-    <script src="./index.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="./output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +23,7 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-<body class="">
+<body class="w-full">
     <div class="ripple">
         <div class="ripple ripple2">
         </div>
@@ -49,21 +48,23 @@
             </ul>
         </nav>
     </header>
-    <main class="mx-auto max-w-full flex flex-col justify-between items-center text-white">
-        <div id="home" class="h-[800px] bg w-full flex flex-items items-center sm:flex-col lg:flex-row">
+    <main class="xl:w-full flex flex-col text-white sm:w-[1500px]">
+        <div id="home" class="h-[800px] w-full flex flex-items items-center sm:max-w-screen-xl lg:flex-row">
             <div class="lg:w-1/2 sm:w-full flex items-center justify-center">
-                <div class="lg:w-[500px] lg:h-[500px] sm:w-[300px] sm:h-[300px] bg-transparent border border-white flex items-center justify-center rounded-[400px] ">
-                    <div class="lg:w-[400px] lg:h-[400px] sm:w-[300px] sm:h-[300px] bg-white rounded-[200px] overflow-hidden relative">
+                <div
+                    class="lg:w-[500px] lg:h-[500px] bg-transparent border border-white flex items-center justify-center rounded-[400px] ">
+                    <div
+                        class="lg:w-[400px] lg:h-[400px] bg-white rounded-[200px] overflow-hidden relative pic-container">
                         <div class="pic-layer">
-       
+
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/2 sm:mt-[40px]">
-                <h4 class="serif-font text-4xl sm:text-3xl">Hello, I am</h4>
-                <h4 class="serif-font text-[9rem] pt-4 leading-[145px]">Erica Pascual</h4>
-                <h4 class="serif-font text-4xl pt-4">Intern at Pro Solutions</h4>
+            <div class="lg:w-1/2 text-res">
+                <h4 class="serif-font text-4xl sm:text-3xl name-res-2">Hello, I am</h4>
+                <h4 class="serif-font text-[9rem] pt-4 leading-[145px] name-res">Erica Pascual</h4>
+                <h4 class="serif-font text-4xl pt-4 name-res-2">Intern at Pro Solutions</h4>
             </div>
         </div>
         <div id="about" class="h-[700px] w-full py-8 px-10 flex flex-col bg-[#0b132b]">
@@ -132,13 +133,16 @@
                 PROJECTS
             </h3>
             <div class="flex flex-col justify-around">
-                
-                <div class="flex flex-col proj-container">
+
+                <div class="proj-container mt-10">
                     <div class="layer">
                         <div class="inner-layer-shadow">
                             <div class="shadow-text flex justify-center items-center w-full">
-                                <p class="text-black proj-name">
+                                <p class="text-black proj-name" id="expandIcon">
                                     KUMON ENROLLMENT PREDICTION SYSTEM
+                                    <span class="material-symbols-outlined">
+                                        expand_more
+                                    </span>
                                 </p>
                             </div>
                             <div class="image-layer">
@@ -150,7 +154,10 @@
                         <div class="w-[50%] proj-img-container">
                             <img src="./src/asset/images/Screenshot 2024-03-06 231744.png">
                         </div>
-                        <div class="w-[50%]">
+                        <div class="w-[50%] proj-txt-container">
+                            <p class="text-black proj-name-res">
+                                KUMON ENROLLMENT PREDICTION SYSTEM
+                            </p>
                             <p class="pl-5">
                                 This system was built to predict whether the child studying in Kumon will be able to
                                 continue enrolling for the next school year. The attributes used was the child's
@@ -174,7 +181,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col proj-container mt-10">
+                <div class="proj-container mt-10">
                     <div class="layer">
                         <div class="inner-layer-shadow">
                             <div class="shadow-text flex justify-center items-center w-full">
@@ -189,7 +196,10 @@
                         <div class="w-[50%] proj-img-container">
                             <img src="./src/asset/images/Screenshot 2024-03-06 233156.png">
                         </div>
-                        <div class="w-[50%]">
+                        <div class="w-[50%] proj-txt-container">
+                            <p class="text-black proj-name-res">
+                                MANILA EDUCATIONAL SECTOR DASHBOARD
+                            </p>
                             <p class="pl-5">
                                 This applies the descriptive analysis of Metro Manila's educational sector
                                 using data visualization, however to be precise, the dashboard was intended to output
@@ -206,7 +216,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col proj-container mt-10">
+                <div class="proj-container mt-10">
                     <div class="layer">
                         <div class="inner-layer-shadow">
                             <div class="shadow-text flex justify-center items-center w-full">
@@ -221,7 +231,10 @@
                         <div class="w-[50%] proj-img-container">
                             <img src="./src/asset/images/Screenshot 2024-03-06 232412.png">
                         </div>
-                        <div class="w-[50%]">
+                        <div class="w-[50%]  proj-txt-container">
+                            <p class="text-black proj-name-res">
+                                PET HAVEN WEBSITE
+                            </p>
                             <p class="pl-5">
                                 This website was developed using HTML, CSS, JavaScript and PHP. This website is mainly
                                 for the
@@ -241,7 +254,7 @@
                     </div>
                 </div>
 
-                <div class="flex flex-col proj-container mt-10">
+                <div class="proj-container mt-10">
                     <div class="layer">
                         <div class="inner-layer-shadow">
                             <div class="shadow-text flex justify-center items-center w-full">
@@ -256,7 +269,10 @@
                         <div class="w-[50%] proj-img-container">
                             <img src="./src/asset/images/Screenshot 2023-11-07 175847.png">
                         </div>
-                        <div class="w-[50%]">
+                        <div class="w-[50%] proj-txt-container">
+                            <p class="text-black proj-name-res">
+                                AQUA WEBSITE
+                            </p>
                             <p class="pl-5">
                                 Aqua Website mainly shows measurement on the harvests of aquaculture farms from
                                 Paombong, Bulakan,
@@ -327,6 +343,14 @@
             </div>
         </div>
     </footer>
+    <script>
+        const expandIcon = document.getElementById('expandIcon');
+        const projContainer = document.querySelector('.proj-container');
+
+        expandIcon.addEventListener('click', function () {
+            projContainer.classList.toggle('expanded');
+        });
+    </script>
 </body>
 
 </html>
