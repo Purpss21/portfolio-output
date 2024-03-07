@@ -10,6 +10,40 @@ html {
     scroll-behavior: smooth;
 }
 
+@keyframes slideonLoad {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+header {
+    animation: 0.9s ease-out 0s 1 slideonLoad;
+}
+
+#home {
+    animation: 1s ease-out 0s 1 slideonLoad;
+}
+
+#about {
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.8);;
+}
+
+.about-text {
+    animation: 1.2s ease-out 0s 1 slideonLoad;
+}
+
+#projects, #contacts {
+    animation: 1.3s ease-out 0s 1 slideonLoad;
+}
+
+
+
+
+
+
 body {
     background: #22223b;
     background-repeat: no-repeat;
@@ -31,8 +65,8 @@ body {
 
 .serif-font {
     font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
+    font-weight: 600;
+    font-style: normal;
 }
 
 .div-bg {
@@ -76,12 +110,12 @@ main {
             height: 300px;
             background-color: transparent;
             position: absolute;
-            box-shadow: 10px -3px 114px 24px rgba(0,0,0,0.76) inset;
+            box-shadow: 10px -3px 114px 24px rgba(0,0,0,0.3) inset;
     
             .shadow-text {
                 position: absolute;
-                bottom: 12px;
-                left: 18px;
+                bottom: 0px;
+                
                 p {
                     font-weight: 700;
                     font-size: 3em;
@@ -94,19 +128,25 @@ main {
                  z-index: -1;
             }
         }
+
+        .proj-name {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            padding-left: 20px;
+        }
     
     }
     
     .project-txt-container {
         padding: 30px 50px;
-        background: #2c2a4a;
+        background: #10002b;
         box-shadow: 0px 2px 3px #000;
         position: relative;
         z-index: -1;
     
         .proj-img-container {
             img {
-                width: 500px;
+                width: 650px;
             }
         }
     }
@@ -129,3 +169,4 @@ input[type=text], input[type=textarea] {
     padding: 2px;
     margin-top: 5px;
 }
+
