@@ -67,12 +67,18 @@ header {
   position: fixed;
 }
 
+.rip2 {
+  top: 54%;
+  right: 20%;
+  position: fixed;
+}
+
 .pic-layer {
   position: absolute;
 }
 .pic-layer img {
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 body {
