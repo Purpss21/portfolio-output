@@ -97,17 +97,6 @@ body.light-mode #projects .text-con {
 body.light-mode #projects .text-con .proj-name-res {
   color: #010305;
 }
-body.light-mode .ripple {
-  border: 1px solid rgba(91, 93, 109, 0.2);
-}
-body.light-mode .ripple .ripple2 {
-  width: 400px;
-  height: 400px;
-  border-radius: 318px;
-  position: absolute;
-  top: 10%;
-  right: 9%;
-}
 
 header {
   background: transparent;
@@ -155,6 +144,7 @@ header .res-menu a {
   display: block;
   text-align: center;
   font-size: 30px;
+  font-size: 3em;
 }
 header .res-menu li:hover {
   background: #056c89;
@@ -265,12 +255,20 @@ input[type=textarea] {
   margin-top: 5px;
 }
 
-@media (min-width: 480px) and (max-width: 500px) {
+@media only screen and (max-width: 480px) {
   main {
     width: 1500px;
   }
-  header .hamburger-icon {
+  header {
+    height: auto;
+    padding: 30px 0px;
+  }
+  header .toggle-icon {
     display: block;
+    font-size: 6em;
+  }
+  header .hamburger-icon {
+    font-size: 4em;
   }
   header .show-menu {
     display: none;
@@ -371,14 +369,20 @@ input[type=textarea] {
     margin-top: 40px;
     line-height: 80px;
   }
+  #projects .proj-res .relative {
+    height: auto;
+  }
   #projects .proj-res .text-con .proj-name-res {
     text-align: center;
     font-size: 6.5em;
     line-height: normal;
   }
   #projects .proj-res .relative {
-    height: 280px;
+    height: auto;
     overflow: hidden;
+  }
+  footer {
+    width: 1500px;
   }
   footer #contacts {
     height: auto;
@@ -387,18 +391,18 @@ input[type=textarea] {
     font-size: 8em;
     margin: 50px 0px;
   }
-  footer #contacts .text-center {
+  footer #contacts p.text-center {
     font-size: 3em;
     margin-bottom: 50px;
+    width: 100%;
   }
   footer #contacts .contact-div {
     flex-direction: column;
     padding: 50px;
     margin: auto;
     border: none;
-  }
-  footer #contacts .contact-div div {
-    width: 100%;
+    width: 1200px;
+    box-sizing: border-box;
   }
   footer #contacts .contact-div p {
     font-size: 3em;
@@ -406,5 +410,22 @@ input[type=textarea] {
   }
   footer #contacts .contact-div i {
     font-size: 70px;
+  }
+  footer #contacts .flex-col label {
+    font-size: 3em;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  footer #contacts .flex-col input {
+    font-size: 1.5em;
+    width: 100%;
+  }
+  footer #contacts .flex-col button {
+    font-size: 3em;
+    padding: 15px 22px;
+    margin-top: 20px;
+  }
+  footer #contacts .flex-col {
+    width: 100%;
   }
 }/*# sourceMappingURL=styles.css.map */
