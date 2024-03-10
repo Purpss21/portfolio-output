@@ -5,118 +5,104 @@
     <title>My Personal Porfolio</title>
     <link rel="stylesheet" type="text/css" href="src/styles.css">
     <script src="dist/index.js"></script>
+    <script src="https://kit.fontawesome.com/4170621fa2.js" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="./output.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
 
-<body class="w-full">
-    <div class="ripple">
-        <div class="ripple ripple2">
-        </div>
-    </div>
-    <div class="ripple rip1">
-        <div class="ripple ripple2">
-        </div>
-    </div>
-    <div class="ripple rip2">
-        <div class="ripple ripple2">
-        </div>
-    </div>
-    <header class="w-full fixed top-0 left-0 bg-[#22223b] shadow">
-        <nav class="mx-auto h-[80px] max-w-[1500px] flex flex-row justify-between items-center text-white">
-            <div>
+<body>
+    <header class="w-full shadow fixed top-0 left-0 z-[1] bg-[#010305]">
+        <nav class="mx-auto h-[80px] max-w-[1500px] flex flex-row items-center justify-around text-white">
+            <div class="flex flex-row items-center justify-center">
+                <div>
+                    <i class="fa-regular fa-moon cursor-pointer toggle-icon" id="moon" style="display: none; "></i>
+                    <i class="fa-regular fa-sun cursor-pointer toggle-icon" id="sun"></i>
+                </div>
             </div>
-            <ul class="flex flex-row justify-between w-[30%] m-auto pt-4">
+            <ul class="show-menu">
                 <li><a href="#home" class="nav-menu">Home</a></li>
                 <li><a href="#about" class="nav-menu">About</a></li>
                 <li><a href="#projects" class="nav-menu">Projects</a></li>
                 <li><a href="#contacts" class="nav-menu">Contact</a></li>
             </ul>
+            <div class="toggle-icon">
+                <i class="fa-solid fa-bars" class="hamburger-icon cursor-pointer" onclick="toggleMenu()"></i>
+            </div>
+            <div class="res-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contacts">Contact</a></li>
+            </div>
         </nav>
     </header>
-    <main class="xl:w-full flex flex-col text-white sm:w-[1500px]">
-        <div id="home" class="h-[800px] w-full flex flex-items items-center sm:max-w-screen-xl lg:flex-row">
+    <main class="w-full flex flex-col text-white m-auto">
+        <div id="home" class="h-[800px] flex flex-items items-center lg:flex-row section">
             <div class="lg:w-1/2 sm:w-full flex items-center justify-center">
                 <div
-                    class="lg:w-[500px] lg:h-[500px] bg-transparent border border-white flex items-center justify-center rounded-[400px] ">
-                    <div
-                        class="lg:w-[400px] lg:h-[400px] bg-white rounded-[200px] overflow-hidden relative pic-container">
+                    class="sm:w-[500px] sm:h-[500px] bg-transparent border border-white flex items-center justify-center rounded-[400px] pic-border">
+                    <div class="sm:w-[400px] sm:h-[400px] bg-white rounded-[200px] overflow-hidden relative pic-container">
                         <div class="pic-layer">
-
+                            <img src="./src/asset/images/Pascual, Erica G.jpg">
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="lg:w-1/2 text-res">
+            <div class="lg:w-1/2 text-res text-[#66d7eb]">
                 <h4 class="serif-font text-4xl sm:text-3xl name-res-2">Hello, I am</h4>
                 <h4 class="serif-font text-[9rem] pt-4 leading-[145px] name-res">Erica Pascual</h4>
                 <h4 class="serif-font text-4xl pt-4 name-res-2">Intern at Pro Solutions</h4>
             </div>
         </div>
-        <div id="about" class="h-[700px] w-full py-8 px-10 flex flex-col bg-[#0b132b]">
-            <div class="flex max-w-[1500px] m-auto mt-0 about-text">
-                <div class="flex p-8 about-div flex-col">
-                    <div class="about-text">
-                        <h3 class="serif-font mb-3 about-title">About me</h3>
-                    </div>
-                    <div class="text-width">
-                        <p class="text-left text-4xl leading-[1.75]">
-                            I'm a fourth year student currently studying at Bulacan State University 
-                            for the course of Bachelor of Science in Information Technology. 
-                            I have a background in data analytics, especially doing data visualizations and making websites. 
-                            I have expertise in using HTML, CSS, and JavaScript. I also have foundational knowledge in using SCSS, 
-                            Tailwind, ReactJS and typescript. My hobbies are playing mobile games, and watching funny and entertaining
-                            videos and currently I'm just starting my interest into F1.
-                        </p>
+        <div id="about" class="h-[700px] py-8 px-10 flex flex-col bg-[#0e1e2b] section">
+            <div class="w-[1400px] m-auto">
+                <div class="flex flex-col m-auto mt-0 section">
+                    <h3 class="serif-font mb-3 about-title text-left">About me</h3>
+                    <div class="flex about-container">
+                        <div class="w-1/2">
+                            <p class="about-text">
+                                Currently studying as a 4th year IT student at Bulacan State University - Main Campus.
+                                I'm an aspiring student practicing myself drifting into world of front-end web developing.
+                                A very detail oriented person and a thoughtful observer. These are the technologies I have
+                                experienced using and currently practicing.
+                            </p>
+                        </div>
+                        <div class="w-1/2">
+                            <div class="flex flex-col py-0 res-container-svg">
+                                <div class="flex flex-row">
+                                    <div><img src="./src/asset/images/icons8-html-logo.svg" class="icons-img" alt="HTML5" title="HTML5"></div>
+                                    <div><img src="./src/asset/images/icons8-css-logo.svg" class="icons-img" alt="CSS3" title="CSS3"></div>
+                                    <div><img src="./src/asset/images/icons8-tailwind-css.svg" class="icons-img" alt="Tailwind CSS" title="Tailwind CSS"></div>
+                                </div>
+                                <div class="flex flex-row">
+                                    <div><img src="./src/asset/images/icons8-javascript.svg" class="icons-img" alt="JavaScript" title="JavaScript"></div>
+                                    <div><img src="./src/asset/images/icons8-microsoft-sql-server.svg" class="icons-img" alt="Microsoft SQL Server" title="Microsoft SQL Server"></div>
+                                    <div><img src="./src/asset/images/icons8-react.svg" class="icons-img" alt="ReactJS" title="ReactJS"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div id="projects" class="h-auto w-[1500px] py-8 px-10 mt-6">
-            <h3 class="text-4xl serif-font text-center mb-10">
+        <div id="projects" class="h-auto py-8 px-10 mt-6">
+            <h3 class="text-5xl serif-font text-center my-12 section">
                 PROJECTS
             </h3>
-            <div class="flex flex-col justify-around">
-
-                <div class="proj-container mt-10">
-                    <div class="layer">
-                        <div class="inner-layer-shadow">
-                            <div class="shadow-text flex justify-center items-center w-full">
-                                <p class="text-black proj-name" id="expandIcon">
-                                    KUMON ENROLLMENT PREDICTION SYSTEM
-                                    <span class="material-symbols-outlined">
-                                        expand_more
-                                    </span>
-                                </p>
-                            </div>
-                            <div class="image-layer">
+            <div class="flex flex-col justify-around proj-res">
+                <div class="flex flex-row">
+                    <div class="flex flex-col m-auto p-8 proj-container">
+                        <div class="">
+                            <div class="relative">
                                 <img src="./src/asset/images/Screenshot 2024-03-06 231744.png">
                             </div>
                         </div>
-                    </div>
-                    <div class="flex project-txt-container">
-                        <div class="w-[50%] proj-img-container">
-                            <img src="./src/asset/images/Screenshot 2024-03-06 231744.png">
-                        </div>
-                        <div class="w-[50%] proj-txt-container">
-                            <p class="text-black proj-name-res">
+                        <div class="p-14 text-con">
+                            <p class="proj-name-res">
                                 KUMON ENROLLMENT PREDICTION SYSTEM
                             </p>
-                            <p class="pl-5">
+                            <p>
                                 This system was built to predict whether the child studying in Kumon will be able to
                                 continue enrolling for the next school year. The attributes used was the child's
                                 demographic profile, his/her
@@ -137,28 +123,18 @@
                             </p>
                         </div>
                     </div>
-                </div>
 
-                <div class="proj-container mt-10">
-                    <div class="layer">
-                        <div class="inner-layer-shadow">
-                            <div class="shadow-text flex justify-center items-center w-full">
-                                <p class="text-black proj-name">MANILA EDUCATIONAL SECTOR DASHBOARD</p>
-                            </div>
-                            <div class="image-layer">
+                    <div class="flex flex-col m-auto p-8 proj-container">
+                        <div class="">
+                            <div class="relative">
                                 <img src="./src/asset/images/Screenshot 2024-03-06 233156.png">
                             </div>
                         </div>
-                    </div>
-                    <div class="flex project-txt-container">
-                        <div class="w-[50%] proj-img-container">
-                            <img src="./src/asset/images/Screenshot 2024-03-06 233156.png">
-                        </div>
-                        <div class="w-[50%] proj-txt-container">
-                            <p class="text-black proj-name-res">
-                                MANILA EDUCATIONAL SECTOR DASHBOARD
+                        <div class="p-14 text-con">
+                            <p class="proj-name-res">
+                                TECH-VOC AND SHS GRADUATES DASHBOARD
                             </p>
-                            <p class="pl-5">
+                            <p>
                                 This applies the descriptive analysis of Metro Manila's educational sector
                                 using data visualization, however to be precise, the dashboard was intended to output
                                 the comparison between the number of Technical-Vocational and Senior High School
@@ -174,26 +150,18 @@
                     </div>
                 </div>
 
-                <div class="proj-container mt-10">
-                    <div class="layer">
-                        <div class="inner-layer-shadow">
-                            <div class="shadow-text flex justify-center items-center w-full">
-                                <p class="text-black proj-name">PET HAVEN WEBSITE</p>
-                            </div>
-                            <div class="image-layer">
+                <div class="flex flex-row">
+                    <div class="flex flex-col m-auto p-8 proj-container">
+                        <div class="">
+                            <div class="relative">
                                 <img src="./src/asset/images/Screenshot 2024-03-06 232412.png">
                             </div>
                         </div>
-                    </div>
-                    <div class="flex project-txt-container">
-                        <div class="w-[50%] proj-img-container">
-                            <img src="./src/asset/images/Screenshot 2024-03-06 232412.png">
-                        </div>
-                        <div class="w-[50%]  proj-txt-container">
-                            <p class="text-black proj-name-res">
-                                PET HAVEN WEBSITE
+                        <div class="p-14  text-con">
+                            <p class="proj-name-res">
+                                THE PET HAVEN WEBSITE
                             </p>
-                            <p class="pl-5">
+                            <p>
                                 This website was developed using HTML, CSS, JavaScript and PHP. This website is mainly
                                 for the
                                 users who would like to adopt cats and dogs. The website consists of adopt features
@@ -210,28 +178,18 @@
                             </p>
                         </div>
                     </div>
-                </div>
 
-                <div class="proj-container mt-10">
-                    <div class="layer">
-                        <div class="inner-layer-shadow">
-                            <div class="shadow-text flex justify-center items-center w-full">
-                                <p class="text-black proj-name">AQUA WEBSITE</p>
-                            </div>
-                            <div class="image-layer">
+                    <div class="flex flex-col m-auto p-8 proj-container">
+                        <div class="">
+                            <div class="relative">
                                 <img src="./src/asset/images/Screenshot 2023-11-07 175847.png">
                             </div>
                         </div>
-                    </div>
-                    <div class="flex project-txt-container">
-                        <div class="w-[50%] proj-img-container">
-                            <img src="./src/asset/images/Screenshot 2023-11-07 175847.png">
-                        </div>
-                        <div class="w-[50%] proj-txt-container">
-                            <p class="text-black proj-name-res">
+                        <div class="p-14  text-con">
+                            <p class="proj-name-res">
                                 AQUA WEBSITE
                             </p>
-                            <p class="pl-5">
+                            <p>
                                 Aqua Website mainly shows measurement on the harvests of aquaculture farms from
                                 Paombong, Bulakan,
                                 Malolos, and Hagonoy Provinces. The website integrates a map feature where users can
@@ -248,33 +206,30 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </main>
-    <footer class="h-auto mx-auto w-full flex flex-row justify-between items-center mt-7 text-white bg-[#0b132b]">
-        <div id="contacts" class="h-[500px] w-[1400px] py-8 px-10 div-section mt-10 mb-10 m-auto">
-            <h3 class="text-4xl serif-font text-center mb-6">
+    <footer class="w-screen flex flex-row justify-between items-center mt-7 text-white bg-[#0e1e2b] pb-20">
+        <div id="contacts" class="h-[500px] py-8 px-10 div-section mt-10 mb-10 m-auto">
+            <h3 class="text-4xl serif-font text-center mb-6 section">
                 CONTACT
             </h3>
-            <p class="text-center">
+            <p class="text-center section">
                 Thank you for viewing my portfolio! If you want to know more about my projects, feel free to contact me!
                 &#x1F609;
             </p>
-            <div class="flex contact-div">
-                <div class="flex w-1/2 flex-col p-10 pt-16">
+            <div class="flex contact-div section">
+                <div class="flex w-1/2 flex-col p-10 pt-16 text-center">
                     <div class="flex flex-col mb-3 items-center justify-center">
-                        <i class="fa-solid fa-location-dot"
-                            style="color: #ffffff; font-size: 30px; margin-bottom: 5px;"></i>
+                        <i class="fa-solid fa-location-dot contact-icon"></i>
                         <p>0412 Dama de Noche St. Panasahan, Malolos Bulacan</p>
                     </div>
                     <div class="flex flex-col mb-3 items-center justify-center">
-                        <i class="fa-solid fa-phone" style="color: #ffffff; font-size: 30px; margin-bottom: 5px;"></i>
+                        <i class="fa-solid fa-phone contact-icon"></i>
                         <p>+639317870348</p>
                     </div>
                     <div class="flex flex-col mb-3 items-center justify-center">
-                        <i class="fa-solid fa-envelope"
-                            style="color: #ffffff; font-size: 30px; margin-bottom: 5px;"></i>
+                        <i class="fa-solid fa-envelope contact-icon"></i>
                         <p>pascualerica08@gmail.com</p>
                     </div>
                 </div>
@@ -297,18 +252,12 @@
                             <input type="textarea" id="message" style="padding: 30px;">
                         </label>
                     </div>
+                    <button>Submit</button>
                 </div>
             </div>
         </div>
     </footer>
-    <script>
-        const expandIcon = document.getElementById('expandIcon');
-        const projContainer = document.querySelector('.proj-container');
-
-        expandIcon.addEventListener('click', function () {
-            projContainer.classList.toggle('expanded');
-        });
-    </script>
+    <script src="index.js"></script>
 </body>
 
 </html>
